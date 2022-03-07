@@ -13,8 +13,24 @@ public class NFA{
 	 * 
 	 * @param description is the string describing a NFA
 	 */
+
+	public String[] arr;
+
 	public NFA(String description) {
-		// TODO Write Your Code Here
+
+		//Divides the string into the following format Zerostates#Onestates#Epsilonstates#Acceptstates 
+		this.arr = description.split("#");
+		//For the next line here I make sure I dont run into the issue where there is no eplsion states
+		if(this.arr.length != 4){
+			//then we know it doesn't contain epsilon states
+			
+			//lets add the accept states !
+			for(int i = 0; i<arr[2].length(); i++)
+			{
+
+			}
+		}
+		//else it does have eplsilon states
 	}
 
 	/**
